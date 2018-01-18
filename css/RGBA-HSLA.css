@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.border{
+    margin:20px;
+    border:10px solid hsla(0,0%,100%,0.5);
+    background:yellowgreen;
+}
+
+.border-clip{
+    margin:20px;
+    border:10px dashed hsla(0,0%,100%,0.9);
+    background:yellowgreen;
+    /** background-clip:padding-box; */
+}
+.box-shadow{
+    margin:20px;
+    background:yellowgreen;
+    /** 左右偏移值  上下偏移值 模糊值 投影距离 颜色 */
+    /** box-shadow:0 0 5px 10px #655; */
+
+    /** box-shadow 是层层叠加的，第一层投影位于最顶层，依次类推，但需按此规律调整半径 */
+    box-shadow:0 0 0 10px #655, 0 0 0 15px deeppink;
+
+}
+
+.out-line{
+    margin:20px;
+    background:yellowgreen;
+    border:10px solid #655;
+    outline: 5px solid deeppink;
+}

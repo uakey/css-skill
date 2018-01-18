@@ -1,0 +1,62 @@
+.btn{
+    margin:20px;
+    padding:6px 16px;
+    border:1px solid #446d88;
+    background:#58a linear-gradient(#77a0bb,#58a);
+    border-radius:4px;
+    box-shadow: 0 -1px 1px #335166;
+    font-size:20px;
+    line-height:30px;
+}
+
+.wh-btn{
+    margin:20px;
+    padding:0.3em 0.8em;
+    border:1px solid #446d88;
+    background:#58a linear-gradient(#77a0bb,#58a);
+    border-radius:0.2em;
+    box-shadow: 0 -0.05em 0.05em #335166;
+    font-size:125%;  /** 相对于父级的字号 */
+    line-height:1.5; /** 字号倍数 */
+}
+
+.sd-btn{
+    margin:20px;
+    padding:0.3em 0.8em;
+    border:1px solid #446d88;
+    background:#58a linear-gradient(hsla(0,0%,100%,.2),transparent);
+    border-radius:0.2em;
+    box-shadow: 0 -0.05em 0.05em rgba(0,0,0,0.5);
+    color:white;
+    text-shadow:0 -0.05em 0.25em rgba(0,0,0,0.5);
+    font-size:125%;  /** 相对于父级的字号 */
+    line-height:1.5; /** 字号倍数 */
+}
+
+.cl-btn{
+    margin:20px;
+    padding:0.3em 0.8em;
+    border:1px solid #446d88;
+    border-radius:0.2em;
+    box-shadow: 0 -0.05em 0.05em rgba(0,0,0,0.5);
+    color:white;
+    text-shadow:0 -0.05em 0.25em rgba(0,0,0,0.5);
+    font-size:125%;  /** 相对于父级的字号 */
+    line-height:1.5; /** 字号倍数 */
+    background:currentColor; /** 如果没有指定颜色，将继承文本颜色 */
+
+}
+
+ul{
+    margin:20px;
+    --accent-color:purple;
+}
+ol{
+    margin:20px;
+    --accent-color:rebeccapurple;
+}
+
+li{
+    margin-bottom:3px;
+    background:var(--accent-color); /** 展示原生css 具有的动态特性 */
+}
