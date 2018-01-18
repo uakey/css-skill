@@ -4,6 +4,8 @@
     list-style:none;
 }
 
+
+
 .border{
     margin:20px;
     border:10px solid hsla(0,0%,100%,0.5);
@@ -32,4 +34,61 @@
     background:yellowgreen;
     border:10px solid #655;
     outline: 5px solid deeppink;
+    border-radius:6px;
+    outline-offset:13px; /** 控制外边框与内边框间距 可以是负值 */
+}
+
+.background-position{
+    height:50px;
+    margin:20px;
+    padding:3px;
+    border:10px solid rgba(102, 85, 85, 0.41);
+    background:url("../image/1.jpg") no-repeat greenyellow;
+
+    /*
+     * 回退方案
+     * background:url("../image/1.jpg") no-repeat bottom right greenyellow;
+     */
+
+    background-position:right 20px bottom 10px;
+
+}
+
+.background-origin{
+    height:50px;
+    margin:20px;
+    padding:10px;
+    border:10px solid rgba(102, 85, 85, 0.41);
+    background:url("../image/1.jpg") no-repeat greenyellow;
+
+    /** position 定位基点 background-origin */
+    background-position:right 20px bottom 10px;
+
+}
+.background-origin1{
+    background-origin:border-box;
+}
+.background-origin2{
+
+    background-origin:content-box;
+}
+.background-origin3{
+
+    background-origin:padding-box; /** 默认值 */
+}
+
+.calc{
+    height:50px;
+    margin:20px;
+    padding:3px;
+    border:10px solid rgba(102, 85, 85, 0.41);
+    background:url("../image/1.jpg") no-repeat greenyellow;
+
+    /*
+     * 回退方案
+     * background:url("../image/1.jpg") no-repeat bottom right greenyellow;
+     */
+
+    background-position:calc(100% - 20px) calc(100% - 10px);
+
 }
