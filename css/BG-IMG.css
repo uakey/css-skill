@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+.box{
+    float:left;
+    width:calc(25% - 10px);
+    box-sizing: border-box;
+    margin:5px;
+    height:160px;
+    border:1px solid #446d88;
+
+}
+
+/** lea.verou.me/css3patterns */
+
+.a1{
+   /** 色块重叠 单元块平铺 */
+   background:white;
+   background-image:
+           linear-gradient(90deg,rgba(200,0,0,.5) 50%,transparent 0),
+           linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);     background-size:30px 30px;
+}
+.a2{
+    background: #58a;
+    background-image:
+            linear-gradient(white 1px, transparent 0),
+            linear-gradient(90deg, white 1px, transparent 0);
+    background-size: 30px 30px;
+}
+.a3{
+    background: #58a;
+    /** 每个渐变对应一个色块 */
+    background-image:
+            linear-gradient(white 2px, transparent 0),
+            linear-gradient(90deg, white 2px, transparent 0),
+            linear-gradient(hsla(0,0%,100%,.3) 1px,
+            transparent 0),
+            linear-gradient(90deg, hsla(0,0%,100%,.3) 1px,
+            transparent 0);
+    /** 渐变对应的区块尺寸 */
+    background-size: 75px 75px, 75px 75px,
+    15px 15px, 15px 15px;
+}
+
+.a4{
+    background: #655;
+    background-image: radial-gradient(tan 30%, transparent 0);
+    background-size: 30px 30px;
+}
+
+.a5{
+    background: #655;
+    background-image:
+        radial-gradient(tan 30%, transparent 0),
+        radial-gradient(tan 30%, transparent 0);
+    background-size: 30px 30px;
+    /** 第二层背景偏移 是 第一层宽高的一半 */
+    background-position: 0 0, 15px 15px;
+}
+
+.a6{
+    /** 棋盘可以用两个直角三角形拼接 */
+    background: #eee;
+    background-image:
+            linear-gradient(45deg, #bbb 25%, transparent 0),
+    /**     linear-gradient(45deg, #bbb 50%, transparent 0); */
+    /** 将直角边由原来的 1/2 缩短为 1/8 */
+            linear-gradient(45deg, transparent 75%, #bbb 0),
+
+    /** 复制相同贴片调整 */
+    linear-gradient(45deg, #bbb 25%, transparent 0),
+        /**     linear-gradient(45deg, #bbb 50%, transparent 0); */
+        /** 将直角边由原来的 1/2 缩短为 1/8 */
+    linear-gradient(45deg, transparent 75%, #bbb 0);
+
+
+
+    /** 调整每个贴片的位置 将第二个贴片移动到 块区中点 和第一个贴片形成正方形*/
+
+    /** 后面两组调整贴片位置到我们想要的区域 */
+    background-position:0 0, 15px 15px, 15px 15px, 30px 30px;
+    background-size: 30px 30px;
+}
+
+.a7{
+    background: #eee;
+    background-image:
+    linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 0, transparent 75%, rgba(0,0,0,.25) 0),
+    linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 0, transparent 75%, rgba(0,0,0,.25) 0);
+    background-position: 0 0, 15px 15px;
+    background-size: 30px 30px;
+}
+.a8{
+    background: #eee;
+    background-image:
+    linear-gradient(-45deg, rgba(0,0,0,.25) 25%, transparent 0, transparent 75%, rgba(0,0,0,.25) 0),
+    linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 0, transparent 75%, rgba(0,0,0,.25) 0);
+    background-position: 0 0, 15px 15px;
+    background-size: 30px 30px;
+}
+
+.a9{
+    background: conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red);
+    background-size: 30px 30px;
+}
