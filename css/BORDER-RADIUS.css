@@ -3,95 +3,68 @@
     padding:0;
     list-style: none;
 }
-.border-radius{
-    margin:20px;
-    background: tan;
-    border-radius: .8em;
-    padding: 1em;
-    box-shadow: 0 0 0 .6em #655; /** 外边框 与 内边框的空隙用阴影填满 */
-    outline: .6em solid #655;
+.box {
+    float: left;
+    line-height: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 5px;
+    background: yellow;
+}
+.a1{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
 }
 
-.linear-gradient{
-    margin:20px;
-    padding:1em;
-    transition: 10s;
-
+/** 椭圆 border-radius 可以单独指定水平和垂直半径 宽度用作水平半径解析，高度用作垂直半径解析*/
+.a2{
+    width:300px;
+    height:200px;
+    border-radius:150px/100px;
+}
+.a3{
+    width:300px;
+    height:200px;
+    border-radius:50%/50%;
 }
 
-.linear-gradient1{
-    background:linear-gradient(#fb3,#58a)
+/** 由于值是一致的 可简化 */
+.a4{
+    width:300px;
+    height:200px;
+    border-radius:50%;
 }
 
-.linear-gradient2{
-    background:linear-gradient(#fb3 20%,#58a 80%)
+/** border-radius 可用空格分开多个值 四个值从左上角以顺时针顺序 如果只有三个值 则第四值与第二个值相同 如果有两个值 第三个与第一个值相同 */
+
+/** border-radius 若用 / 分开 斜杠前指水平四个值   斜杠后指 垂直四个值 */
+/** 如 10px / 5px 20px  相当于 10px 10px 10px 10px / 5px 20px 5px 20px */
+
+.a5{
+    width:300px;
+    height:200px;
+    border-radius:50% / 100% 100% 0 0;
+}
+.a6{
+    width:300px;
+    height:200px;
+    border-radius: 100% 0 0 100% / 50%;
+}
+.a7{
+    width:300px;
+    height:200px;
+    border-radius: 100% 0 0 0;
 }
 
-.linear-gradient3{
-    background:linear-gradient(#fb3 50%,#58a 50%)
-}
 
-.linear-gradient4{
-    background:linear-gradient(#fb3 20%,red 20%,red 80%,#58a 80%)
-}
 
-.linear-gradient5{
-    background:linear-gradient(#fb3 20%,red 40%,red 60%,#58a 80%)
-}
 
-.linear-gradient6{
-     background:linear-gradient(#fb3 20%,red 40%,red 60%,#58a 80%) no-repeat;
-    background-size:100% 30px;
- }
 
-.linear-gradient7{
-    background:linear-gradient(#fb3 20%,red 40%,red 60%,#58a 80%);
-    background-size:100% 30px;
-}
 
-.linear-gradient8{
-    background:linear-gradient(to right,#fb3 20%,red 40%,red 60%,#58a 80%) no-repeat;
-    background-size:30px 100% ;
- }
 
-.linear-gradient9{
-    background:linear-gradient(to right,#fb3 20%,red 40%,red 60%,#58a 80%);
-    background-size:30px 100% ;
- }
 
-.linear-gradient9:hover{
-    background-position-x: -1000px;
-}
-.linear-gradient10{
-    background:linear-gradient(45deg,#fb3 25%,#58a 25%,#58a 50%,#fb3 50%,#fb3 75%,#58a 75%);
-    background-size:30px 30px;  /** 等块状大小拼接 */
- }
-.linear-gradient10:hover{
-    background-position-x:-1000px;
- }
-.linear-gradient11{
-    background:repeating-linear-gradient(45deg,#fb3,#fb3 15px,#58a 0px,#58a 30px);
-    /** background-size:30px 30px; */  /** 等块状大小拼接 */
- }
-.linear-gradient11:hover{
-    background-position-x:-1000px;
- }
-.linear-gradient12{
-     background:repeating-linear-gradient(45deg,#fb3,#58a 30px);
-    /*background-size:100% 30px;*/
- }
-.linear-gradient12:hover{
-     background-position-x:-1000px;
- }
-.linear-gradient13{
-    background: repeating-linear-gradient(30deg, #79b, #79b 15px, #58a 0, #58a 30px);
-}
-.linear-gradient15{
-    background: #58a;
-    /** 叠加手法实现 图片覆盖在背景图上 */
-    background-image: repeating-linear-gradient(30deg,
-    hsla(0,0%,100%,.1),
-    hsla(0,0%,100%,.1) 15px,
-    transparent 0, transparent 30px);
-}
+
+
+
 

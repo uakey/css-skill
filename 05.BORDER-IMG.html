@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/BORDER-IMG.css">
+</head>
+<body>
+<div class="clearfix">
+    <div class="box a1">
+        此效果比较怪异 是因为background-origin 的默认值是 padding-box
+        图片的显示尺寸不仅取决于 padding box 的尺寸，而且被放置在了padding box的原点（左上角）
+    </div>
+    <div class="box a2">
+        为了修正这个问
+        题，只需把 background-origin 也设置为 border-box 就可以了：
+    </div>
+</div>
+<div class="box a1">
+    border - image
+</div>
+<div class="box a2">
+    border - image
+</div>
+<div class="box a3">
+    border - image 简写
+</div>
+<div class="box a4">
+    border - image 简写
+</div>
+<div class="box a5">
+    border - image 简写 2
+</div>
+<div class="box a6">
+    border - image 简写 2
+</div>
+<div class="box a7">
+    border - image
+</div>
+</body>
+</html>

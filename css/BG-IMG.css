@@ -76,8 +76,6 @@
         /** 将直角边由原来的 1/2 缩短为 1/8 */
     linear-gradient(45deg, transparent 75%, #bbb 0);
 
-
-
     /** 调整每个贴片的位置 将第二个贴片移动到 块区中点 和第一个贴片形成正方形*/
 
     /** 后面两组调整贴片位置到我们想要的区域 */
@@ -103,6 +101,40 @@
 }
 
 .a9{
-    background: conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red);
-    background-size: 30px 30px;
+    width:calc(100% - 10px);
+    background: linear-gradient(90deg, #fb3 15%, #655 0, #655 40%, #ab4 0, #ab4 65%, hsl(20, 40%, 90%) 0);
+    background-size: 80px 100%;
+}
+
+.a10{
+    width:calc(100% - 10px);
+    background: hsl(20, 40%, 90%);
+    background-image:
+            linear-gradient(90deg, #fb3 10px, transparent 0),
+            linear-gradient(90deg, #ab4 20px, transparent 0),
+            linear-gradient(90deg, #655 20px, transparent 0);
+    background-size: 80px 100%, 60px 100%, 40px 100%;
+
+}
+.a11{
+    width:calc(100% - 10px);
+    background: hsl(20, 40%, 90%);
+    background-image:
+    /** linear 具有层级关系 先写的在上层 后写的在下层 */
+        linear-gradient(90deg, #fb3 10px, transparent 0),
+       /*linear-gradient(90deg, #ab4 20px, transparent 0);*/
+       linear-gradient(90deg, #655 20px, transparent 0);
+    /*background-size: 80px 100%, 60px 100%, 40px 100%;*/
+
+    background-size: 80px 100%, 40px 100%;
+}
+.a12{
+    width:calc(100% - 10px);
+    background: hsl(20, 40%, 90%);
+    background-image:
+            linear-gradient(90deg, #fb3 11px, transparent 0),
+            linear-gradient(90deg, #ab4 23px, transparent 0),
+            linear-gradient(90deg, #655 41px, transparent 0);
+    background-size: 41px 100%, 61px 100%, 83px 100%;
+    overflow: auto;
 }

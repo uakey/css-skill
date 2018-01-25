@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.border-radius{
+    margin:20px;
+    background: tan;
+    border-radius: .8em;
+    padding: 1em;
+    box-shadow: 0 0 0 .6em #655; /** 外边框 与 内边框的空隙用阴影填满 */
+    outline: .6em solid #655;
+}
+
+.linear-gradient{
+    margin:20px;
+    padding:1em;
+    transition: 10s;
+
+}
+
+.linear-gradient1{
+    background:linear-gradient(#fb3,#58a)
+}
+
+.linear-gradient2{
+    background:linear-gradient(#fb3 20%,#58a 80%)
+}
+
+.linear-gradient3{
+    background:linear-gradient(#fb3 50%,#58a 50%)
+}
+
+.linear-gradient4{
+    background:linear-gradient(#fb3 20%,red 20%,red 80%,#58a 80%)
+}
+
+.linear-gradient5{
+    background:linear-gradient(#fb3 20%,red 40%,red 60%,#58a 80%)
+}
+
+.linear-gradient6{
+     background:linear-gradient(#fb3 20%,red 40%,red 60%,#58a 80%) no-repeat;
+    background-size:100% 30px;
+ }
+
+.linear-gradient7{
+    background:linear-gradient(#fb3 20%,red 40%,red 60%,#58a 80%);
+    background-size:100% 30px;
+}
+
+.linear-gradient8{
+    background:linear-gradient(to right,#fb3 20%,red 40%,red 60%,#58a 80%) no-repeat;
+    background-size:30px 100% ;
+ }
+
+.linear-gradient9{
+    background:linear-gradient(to right,#fb3 20%,red 40%,red 60%,#58a 80%);
+    background-size:30px 100% ;
+ }
+
+.linear-gradient9:hover{
+    background-position-x: -1000px;
+}
+.linear-gradient10{
+    background:linear-gradient(45deg,#fb3 25%,#58a 25%,#58a 50%,#fb3 50%,#fb3 75%,#58a 75%);
+    background-size:30px 30px;  /** 等块状大小拼接 */
+ }
+.linear-gradient10:hover{
+    background-position-x:-1000px;
+ }
+.linear-gradient11{
+    background:repeating-linear-gradient(45deg,#fb3,#fb3 15px,#58a 0px,#58a 30px);
+    /** background-size:30px 30px; */  /** 等块状大小拼接 */
+ }
+.linear-gradient11:hover{
+    background-position-x:-1000px;
+ }
+.linear-gradient12{
+     background:repeating-linear-gradient(45deg,#fb3,#58a 30px);
+    /*background-size:100% 30px;*/
+ }
+.linear-gradient12:hover{
+     background-position-x:-1000px;
+ }
+.linear-gradient13{
+    background: repeating-linear-gradient(30deg, #79b, #79b 15px, #58a 0, #58a 30px);
+}
+.linear-gradient15{
+    background: #58a;
+    /** 叠加手法实现 图片覆盖在背景图上 */
+    background-image: repeating-linear-gradient(30deg,
+    hsla(0,0%,100%,.1),
+    hsla(0,0%,100%,.1) 15px,
+    transparent 0, transparent 30px);
+}
+

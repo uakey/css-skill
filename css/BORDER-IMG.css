@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    visibility:hidden;
+    overflow: hidden;
+    height:0;
+    clear: both;
+}
+.box{
+    width:calc(25% - 10px);
+    margin:5px;
+    box-sizing: border-box;
+    float:left;
+
+}
+
+.a1{
+
+    padding: 1em;
+    border: 1em solid transparent;
+    background: linear-gradient(white, white),
+    url('../image/3.png');
+    background-size: cover;
+    background-clip: padding-box, border-box;
+
+}
+
+.a2{
+    padding: 1em;
+    border: 1em solid transparent;
+    background: linear-gradient(white, white),
+    url('../image/3.png');
+    background-size: cover;
+    background-clip: padding-box, border-box;
+    background-origin:border-box;
+}
+
+/** a2属性简写 */
+.a3{
+    padding: 1em;
+    border: 1em solid transparent;
+    background:
+            linear-gradient(white, white) padding-box,
+            url('../image/3.png') border-box 0 / cover;
+}
+
+.a4{
+    padding: 1em;
+    border: 1em solid transparent;
+    background: linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(-45deg,
+            red 0, red 12.5%,
+            transparent 0, transparent 25%,
+            #58a 0, #58a 37.5%,
+            transparent 0, transparent 50%)
+    0 / 5em 5em;
+}
+.a5{
+    padding: 1em;
+    border: 16px solid transparent;
+    border-image: 16 repeating-linear-gradient(-45deg,
+    red 0, red 1em,
+    transparent 0, transparent 2em,
+    #58a 0, #58a 3em,
+    transparent 0, transparent 4em);
+}
+
+.a6{
+    padding: 1em;
+    border: 1px solid transparent;
+    background:
+            linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg,
+            black 0, black 25%, white 0, white 50%
+            ) 0 / .6em .6em;
+    animation: ants 12s linear infinite;
+}
+@keyframes ants { to { background-position: 100% } }
+
+.a7{
+    border-top: .2em solid transparent;
+    border-image: 100% 0 0 linear-gradient(90deg,
+    currentColor 4em,
+    transparent 0);
+    padding-top: 1em;
+}
