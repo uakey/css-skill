@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.box{
+    float:left;
+    width:calc(25% - 10px);
+    height:160px;
+    line-height: 160px;
+    text-align: center;
+    background:yellow;
+    margin:5px;
+
+}
+.a1{
+    transform:skewX(-45deg);
+}
+.a2{
+    transform:skewY(-45deg);
+}
+
+/** 解决 斜向变形之后 文字也变形问题 */
+
+/** 嵌套方案 嵌套子集反向变形*/
+.a1 span{
+    display: inline-block;
+    transform:skewX(45deg);
+}
+.a2 span{
+    display: inline-block;
+    transform:skewY(45deg);
+}
+
+/** 伪元素方案 */
+.a3{
+    position: relative;
+    left:160px;
+    top:160px;
+    background:none;
+}
+.a3:before{
+    content: '';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:yellow;
+    z-index:-10;
+    transform:skewX(-45deg)
+
+}
+.a4{
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+    overflow: hidden;
+    margin-left: 350px;
+    margin-top: 150px;
+}
+.a4 img{
+    width:100%;
+    height:100%;
+    transform: rotate(-45deg);
+}
+.a5{
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+    overflow: hidden;
+    margin-left: 350px;
+    margin-top: 150px;
+}
+
+/** 1.42 由勾股定理计算得出 */
+.a5 img{
+    width:100%;
+    height:100%;
+    transform: rotate(-45deg) scale(1.42);
+}
+
+/** 上述方法需要一层额外的 html 标签 */
+
+.img{
+    clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+    transition:1s clip-path;
+
+}
+
+.img:hover{
+    clip-path:polygon(0 0,100% 0,100% 100%,0 100%);
+}
